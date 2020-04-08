@@ -46,4 +46,13 @@ public class Player {
 
         return move;
     }
+    
+    // to be used by the artificial intelligence when implemented
+    public int GenerateMove(){
+        int move = 1;
+        
+        // TODO: add code that returns a move in accordance with the board status
+        
+        return move;
+    }
 }

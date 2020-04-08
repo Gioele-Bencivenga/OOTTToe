@@ -11,7 +11,7 @@ package ootttoe;
  */
 public class Board {
 
-    String[] board;
+    String[] board; // array of board slots
 
     String winner;
 
@@ -86,7 +86,7 @@ public class Board {
         return false; // the only reason this is here and not in the else is because the compiler was complaining
     }
 
-    // prints the contents of the board in a nice way, totally not stolen from someone else
+    // prints the contents of the board in a nice way
     public void PrintBoard() {
         System.out.println("Current board status: ");
 
