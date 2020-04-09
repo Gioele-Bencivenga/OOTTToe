@@ -79,11 +79,22 @@ public class Board {
             if (line.equals(_marker + _marker + _marker)) {
                 winner = _marker;
                 return true;
-            }else{
-                winner = null;
             }
         }
-        return false; // the only reason this is here and not in the else is because the compiler was complaining
+
+        int nOfFreeSlots = 8;
+        for (int i = 0; i < 8; i++) {
+            if (!IsSlotFree(i)) {
+                nOfFreeSlots--;
+            }
+        }
+
+        if (nOfFreeSlots <= 0 && winner == null) {
+            winner = "draw";
+            return true;
+        } else {
+            return false;
+        }
     }
 
     // prints the contents of the board in a nice way

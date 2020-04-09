@@ -40,7 +40,7 @@ public class Player {
                 move = Integer.parseInt(in.nextLine());
             } catch (NumberFormatException e) {
                 System.out.println("Only insert NUMBERS 1 TO 9!");
-                move = 0; // we initialize System.out.println("Only numbers 1 to 9");the variable so the while loop continues
+                move = 0; // we initialize the variable to an invalid value so the while loop continues without throwing an exception
             }
         } while (move < 1 || move > 9);
 

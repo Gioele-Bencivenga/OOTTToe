@@ -30,7 +30,8 @@ public class OOTTToe {
                 board.PrintBoard();
             }
             // we check if the player won with his last move
-            if (board.IsWinner(playerX.GetMarker())) {
+            board.IsWinner(playerX.GetMarker());
+            if (board.winner != null) {
                 break;
             }
 
@@ -41,16 +42,18 @@ public class OOTTToe {
                 board.PrintBoard();
             }
             // we check if the player won with his last move
-            if (board.IsWinner(playerO.GetMarker())) {
+            board.IsWinner(playerO.GetMarker());
+            if (board.winner != null) {
                 break;
             }
+
         }
 
         // we print the board one last time to let the players see how their choices played out
         board.PrintBoard();
 
-        if (board.winner == null) {
-            System.out.println("It's a tie! No one has won this game, how boring. \nOh well, this is a boring game after all.");
+        if (board.winner == "draw") {
+            System.out.println("It's a draw! No one has won this game, how boring. \nOh well, this is a boring game after all.");
         } else {
             System.out.println("The player using the marker " + board.winner + " has won this game!");
         }
